@@ -1,7 +1,1 @@
-_build/
-
-_opam/
-.install
-
-.merlin
-
+/_build

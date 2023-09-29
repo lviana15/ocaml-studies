@@ -1,4 +1,4 @@
 (executable
  (public_name server)
  (name server)
- (libraries cohttp-lwt-unix  conduit-lwt))
+ (libraries opium))
