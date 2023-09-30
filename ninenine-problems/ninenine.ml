@@ -15,6 +15,8 @@ let rec last_two (list: 'a list): ('a * 'a) option =
     | _ :: x -> last_two x
 ;;
 
+List.nth
+(* 03 - Nth element on list *)
 let rec nth list n =
     match list with
     | [] -> raise (Failure "Empty")
@@ -39,3 +41,20 @@ let rev list =
     in
     aux [] list
 ;;
+
+(* 06 - Palindrome *)
+let is_palindrome list =
+    list = rev list
+;;
+
+
+
+
+
+
+
+
+
+
+
+
