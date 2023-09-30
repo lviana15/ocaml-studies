@@ -47,14 +47,14 @@ let is_palindrome list =
     list = rev list
 ;;
 
+(* 07 - Flatten a list *)
+type 'a node = | One of 'a | Many of 'a node list
 
 
-
-
-
-
-
-
-
-
+let rec flatten lst =
+    match lst with
+    | [] -> []
+    | One x :: rest -> x :: flatten rest
+    | Many lst :: rest -> flatten lst @ flatten rest
+;;
 
