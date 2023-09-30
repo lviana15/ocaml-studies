@@ -15,6 +15,13 @@ let rec last_two (list: 'a list): ('a * 'a) option =
     | _ :: x -> last_two x
 ;;
 
+let rec nth list n =
+    match list with
+    | [] -> raise (Failure "Empty")
+    | hd :: tl -> if n = 0 then hd else nth tl (n - 1)
+;;
+
+
 (* 04 - Length of a list *)
 let length list =
     let rec aux k = function
